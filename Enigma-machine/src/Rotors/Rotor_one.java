@@ -1,6 +1,6 @@
 package Rotors;
 
-public class Rotor_one{
+public class Rotor_one implements IRotor{
 	private String permutation="EKMFLGDQVZNTOWYHXUSPAIBRCJ";
 	private char stepping_mechanism='R';
 	

@@ -28,7 +28,7 @@ public class Main {
 		System.out.println("\nType in the string you want to be encoded or decoded and press enter:");
 		Scanner sc=new Scanner(System.in);
 		String input=sc.nextLine().toUpperCase().trim().replaceAll("\\s+", "");
-		String output=r_three.getFromRefOutput(r_two.getFromRefOutput(r_one.getFromRefOutput(rB.getToRotorOneOutput(rB.getOutput(r_one.getOutput(r_two.getOutput(r_three.getOutput(input))))))));
+		String output=r_three.getFromRefOutput(r_two.getFromRefOutput(r_one.getFromRefOutput(rB.getOutput(r_one.getOutput(r_two.getOutput(r_three.getOutput(input)))))));
 		System.out.println(output);
 	}
 

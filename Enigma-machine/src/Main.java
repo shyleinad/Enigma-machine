@@ -33,7 +33,7 @@ public class Main {
 		System.out.println("\nType in the string you want to be encoded and press enter:");
 		Scanner sc_text=new Scanner(System.in);
 		String input=sc_text.nextLine().toUpperCase().trim().replaceAll("\\s+", "");
-		String output=r_three.getFromRefOutput((r_two.getFromRefOutput(r_one.getFromRefOutput(rB.getOutput(r_one.getOutput(r_two.getOutput(r_three.getOutput(input, init_pos.charAt(2)), init_pos.charAt(1)), init_pos.charAt(0)))))));
+		String output=r_three.getFromRefOutput((r_two.getFromRefOutput(r_one.getFromRefOutput(rB.getOutput(r_one.getOutput(r_two.getOutput(r_three.getOutput(input, init_pos), init_pos), init_pos), init_pos)))));
 		System.out.println(output);
 	}
 

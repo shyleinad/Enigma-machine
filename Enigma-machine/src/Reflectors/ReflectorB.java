@@ -3,8 +3,10 @@ package Reflectors;
 public class ReflectorB implements IReflector{
 	private String[] permutation={"ABCDEFGDIJKGMKMIEBFTCVVJAT", "ABCDEFGHIJKLMNOPQRSTUVWXYZ"};
 	private String output="";
+	private int r_one_init_pos_index;
 	
-	public String getOutput(String s) {
+	public String getOutput(String s, String init_pos) {
+		r_one_init_pos_index=permutation[1].indexOf(init_pos.charAt(0));
 		String output_part="";
 		output="";
 		//in:

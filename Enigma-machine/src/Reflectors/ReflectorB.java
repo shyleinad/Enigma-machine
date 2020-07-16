@@ -12,6 +12,7 @@ public class ReflectorB implements IReflector{
 		for (int i = 0; i < s.length(); i++) {
 			output_part+=permutation[0].charAt(permutation[1].indexOf(s.charAt(i)));
 		}
+		//out:
 		for (int i = 0; i < output_part.length(); i++) {
 			if (s.charAt(i)==output_part.charAt(i)) {
 				output+=permutation[1].charAt(permutation[0].lastIndexOf(output_part.charAt(i)));

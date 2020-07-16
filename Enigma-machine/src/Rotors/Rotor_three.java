@@ -12,7 +12,13 @@ public class Rotor_three implements IRotor{
 	public String getOutput(String s) {
 		output="";
 		for (int i = 0; i < s.length(); i++) {
-			output+=permutation[0].charAt(permutation[1].indexOf(s.charAt(i)));
+			try {
+				output+=permutation[0].charAt(permutation[1].indexOf(s.charAt(i))+i+1);
+			}
+			catch (StringIndexOutOfBoundsException e) {
+				permutation[0]+=permutation[0];
+				output+=permutation[0].charAt(permutation[1].indexOf(s.charAt(i))+i+1);
+			}
 		}
 		return output;
 	}

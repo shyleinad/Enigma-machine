@@ -20,6 +20,7 @@ public class ReflectorB implements IReflector{
 				output+=permutation[1].charAt(permutation[0].indexOf(output_part.charAt(i)));
 			}
 		}
+		System.out.println("ref output to rotor one: "+output);
 		return output;
 	}
 }

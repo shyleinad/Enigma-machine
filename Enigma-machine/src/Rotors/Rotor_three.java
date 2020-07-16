@@ -9,7 +9,7 @@ public class Rotor_three implements IRotor{
 		return permutation;
 	}
 	
-	public String getOutput(String s) {
+	public String getOutput(String s, char init_pos) {
 		output="";
 		for (int i = 0; i < s.length(); i++) {
 			try {

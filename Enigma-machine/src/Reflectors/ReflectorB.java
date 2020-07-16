@@ -3,7 +3,6 @@ package Reflectors;
 public class ReflectorB implements IReflector{
 	private String[] permutation={"ABCDEFGDIJKGMKMIEBFTCVVJAT", "ABCDEFGHIJKLMNOPQRSTUVWXYZ"};
 	private String output="";
-	//private String works_with_last_index="CDEGHIKLRTUX";
 	
 	public String getOutput(String s) {
 		String output_part="";

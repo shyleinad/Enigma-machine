@@ -10,8 +10,6 @@ public class Rotor_two implements IRotor{
 	public String getOutput(String s, String init_pos) {
 		self_init_pos_index=permutation[1].indexOf(init_pos.charAt(1));
 		r_three_init_pos_index=permutation[1].indexOf(init_pos.charAt(2));
-		/*permutation[0]=permutation[0].substring(permutation[1].indexOf(init_pos));
-		permutation[1]=permutation[1].substring(permutation[1].indexOf(init_pos));*/
 		output="";
 		for (int i = 0; i < s.length(); i++) {
 			output+=permutation[0].charAt(permutation[1].indexOf(s.charAt(i))+self_init_pos_index-r_three_init_pos_index);

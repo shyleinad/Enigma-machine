@@ -23,7 +23,7 @@ public class Rotor_one implements IRotor{
 	public String getFromRefOutput(String s) {
 		output="";
 		for (int i = 0; i < s.length(); i++) {
-			output+=permutation[1].charAt(permutation[0].indexOf(s.charAt(i))+r_two_init_pos_index);
+			output+=permutation[1].charAt(permutation[0].indexOf(s.charAt(i))+r_two_init_pos_index-self_init_pos_index);
 		}
 		System.out.println("rotor one output to rotor two: "+output);
 		//System.out.println("rotor on permutation: "+permutation[0]+" "+permutation[1]);

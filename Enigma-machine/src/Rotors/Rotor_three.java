@@ -12,7 +12,6 @@ public class Rotor_three implements IRotor{
 		r_two_init_pos_index=permutation[1].indexOf(init_pos.charAt(1));
 		output="";
 		for (int i = 0; i < s.length(); i++) {
-			self_init_pos_index++;
 			try {
 				output+=permutation[0].charAt(permutation[1].indexOf(s.charAt(i))+self_init_pos_index);
 			}

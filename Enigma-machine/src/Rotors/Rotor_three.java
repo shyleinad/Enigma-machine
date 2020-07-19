@@ -5,11 +5,18 @@ public class Rotor_three implements IRotor{
 	private char stepping_mechanism='W';
 	private char output=0;
 	private int self_init_pos_index;
-	private int r_two_init_pos_index;
 	
-	public char getOutput(char s, String init_pos) {
-		self_init_pos_index=permutation[1].indexOf(init_pos.charAt(2));
-		r_two_init_pos_index=permutation[1].indexOf(init_pos.charAt(1));
+	public int get_self_init_pos_index() {
+		return self_init_pos_index;
+	}
+	
+	public Rotor_three(char init_pos) {
+		self_init_pos_index=permutation[1].indexOf(init_pos);
+		//r_two_init_pos_index=permutation[1].indexOf(r_two_init_pos);
+	}
+
+	public char getOutput(char s) {
+		self_init_pos_index++;
 		output=0;
 		try {
 			output+=permutation[0].charAt(permutation[1].indexOf(s)+self_init_pos_index);
@@ -19,7 +26,7 @@ public class Rotor_three implements IRotor{
 			permutation[1]+=permutation[1];
 			output+=permutation[0].charAt(permutation[1].indexOf(s));
 		}
-		//System.out.println("rotor three output to rotor two: "+output);
+		System.out.println("rotor three output to rotor two: "+output);
 		return output;
 	}
 	

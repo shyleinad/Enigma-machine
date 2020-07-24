@@ -35,7 +35,7 @@ public class Main {
 		String input=sc_text.nextLine().toUpperCase().trim().replaceAll("\\s+", "");
 		String output = "";
 		for (int i = 0; i < input.length(); i++) {
-			output+=Character.toString(r_three.getFromRefOutput((r_two.getFromRefOutput(r_one.getFromRefOutput(rB.getOutput(r_one.getOutput(r_two.getOutput(r_three.getOutput(input.charAt(i)), r_three.get_self_init_pos_index()), r_two.get_self_init_pos_index()), r_one.get_self_init_pos_index()))))));
+			output+=(i!=0&&i%5==0)?" "+Character.toString(r_three.getFromRefOutput((r_two.getFromRefOutput(r_one.getFromRefOutput(rB.getOutput(r_one.getOutput(r_two.getOutput(r_three.getOutput(input.charAt(i)), r_three.get_self_init_pos_index()), r_two.get_self_init_pos_index()), r_one.get_self_init_pos_index())))))):Character.toString(r_three.getFromRefOutput((r_two.getFromRefOutput(r_one.getFromRefOutput(rB.getOutput(r_one.getOutput(r_two.getOutput(r_three.getOutput(input.charAt(i)), r_three.get_self_init_pos_index()), r_two.get_self_init_pos_index()), r_one.get_self_init_pos_index()))))));
 		}
 		System.out.print(output);
 	}

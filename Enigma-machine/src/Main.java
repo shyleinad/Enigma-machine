@@ -24,7 +24,7 @@ public class Main {
 	public static void main(String[] args) {
 		printLogo();
 		Scanner sc_settings=new Scanner(System.in);
-		System.out.println("\nPlease give the initial rotor settings (3 ASCII characters from A to Z):");
+		System.out.println("\nPlease give the initial rotor settings (3 ASCII letters from A to Z):");
 		String init_pos=sc_settings.nextLine().toUpperCase().trim().replaceAll("\\s+", "");
 		Rotor_three r_three=new Rotor_three(init_pos.charAt(2));
 		Rotor_two r_two=new Rotor_two(init_pos.charAt(1));

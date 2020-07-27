@@ -14,12 +14,14 @@ public class ReflectorB implements IReflector{
 		String output_part="";
 		output=0;
 		//in:
-		output_part+=permutation[0].charAt(permutation[1].indexOf(s)-r_one_init_pos_index);
+		permutation[1]+=permutation[1];
+		permutation[1]=permutation[1].substring(r_one_init_pos_index, r_one_init_pos_index+26);
+		output_part+=permutation[0].charAt(permutation[1].indexOf(s));
 		//out:
-		output+=permutation[1].charAt(permutation[0].indexOf(output_part)+r_one_init_pos_index);
+		output+=permutation[1].charAt(permutation[0].indexOf(output_part));
 		if (s==output) {
 			output=0;
-			output+=permutation[1].charAt(permutation[0].lastIndexOf(output_part)+r_one_init_pos_index);
+			output+=permutation[1].charAt(permutation[0].lastIndexOf(output_part));
 		}
 		System.out.println("ref output to rotor one: "+output);
 		return output;

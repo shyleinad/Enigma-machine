@@ -10,7 +10,6 @@ public class ReflectorB implements IReflector{
 	}
 	
 	public char getOutput(char s, int r_one_init_pos_index) {
-		//r_one_init_pos_index=permutation[1].indexOf(init_pos.charAt(0));
 		String output_part="";
 		output=0;
 		//in:

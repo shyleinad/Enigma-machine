@@ -13,7 +13,6 @@ public class Rotor_two implements IRotor{
 	
 	public Rotor_two(char init_pos) {
 		self_init_pos_index=permutation[1].indexOf(init_pos);
-		//r_three_init_pos_index=permutation[1].indexOf(r_three_init_pos);
 	}
 	
 	public char getOutput(char s, int r_three_init_pos_index) {
@@ -49,16 +48,7 @@ public class Rotor_two implements IRotor{
 	
 	public char getFromRefOutput(char s) {
 		output=0;
-		output=permutation[1].charAt(permutation[0].indexOf(s)/*-self_init_pos_index+r_three_init_pos_index*/);
-		/*try {
-			self_init_pos_index=self_init_pos_index-permutation[1].length();
-			output=permutation[1].charAt(permutation[0].indexOf(s)-self_init_pos_index+r_three_init_pos_index);
-		}
-		catch (StringIndexOutOfBoundsException e) {
-			//TODO: exception handling
-			System.out.println("r2 Baj van more!");
-			output=permutation[1].charAt(permutation[0].indexOf(s)-self_init_pos_index+r_three_init_pos_index);
-		}*/
+		output=permutation[1].charAt(permutation[0].indexOf(s));
 		System.out.println("rotor two output to rotor three: "+output);
 		return output;
 	}

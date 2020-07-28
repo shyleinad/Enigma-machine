@@ -12,6 +12,7 @@ public class ReflectorB implements IReflector{
 	public char getOutput(char s, int r_one_init_pos_index) {
 		String output_part="";
 		output=0;
+		permutation[1]="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 		//in:
 		permutation[1]+=permutation[1];
 		permutation[1]=permutation[1].substring(r_one_init_pos_index, r_one_init_pos_index+26);
@@ -22,7 +23,7 @@ public class ReflectorB implements IReflector{
 			output=0;
 			output+=permutation[1].charAt(permutation[0].lastIndexOf(output_part));
 		}
-		System.out.println("ref output to rotor one: "+output);
+		//System.out.println("ref output to rotor one: "+output);
 		return output;
 	}
 }

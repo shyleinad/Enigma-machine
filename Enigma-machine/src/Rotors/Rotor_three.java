@@ -15,8 +15,12 @@ public class Rotor_three implements IRotor{
 	}
 
 	public char getOutput(char s) {
+		permutation[0]="BDFHJLCPRTXVZNYEIWGAKMUSQO";
 		self_init_pos_index++;
 		output=0;
+		if (self_init_pos_index>26) {
+			self_init_pos_index=1;
+		}
 		permutation[0]+=permutation[0];
 		permutation[0]=permutation[0].substring(self_init_pos_index, self_init_pos_index+26);
 		output+=permutation[0].charAt(permutation[1].indexOf(s));
@@ -37,13 +41,14 @@ public class Rotor_three implements IRotor{
 			permutation[1]=permutation[1].substring(self_init_pos_index);
 			output+=permutation[0].charAt(permutation[1].indexOf(s));
 		}*/
-		System.out.println("rotor three output to rotor two: "+output);
+		/*System.out.println("r3 index: "+self_init_pos_index);
+		System.out.println(s+"\nrotor three output to rotor two: "+output);*/
 		return output;
 	}
 	
 	public char getFromRefOutput(char s) {
 		output=0;
-		permutation[1]="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+		//permutation[1]="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 		output=permutation[1].charAt(permutation[0].indexOf(s));
 		return output;
 	}
